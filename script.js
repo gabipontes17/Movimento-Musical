@@ -1,15 +1,20 @@
-document.addEventListener('DOMContentLoaded', function (){
-let tamanhoAtualFonte = 1;
+document.addEventListener("DOMContentLoaded", function () {
+    const btnAumentar = document.getElementById("aumentar-fonte");
+    const btnDiminuir = document.getElementById("diminuir-fonte");
 
-const botaoAumentarFonte = document.getElementsById('aumentar-fonte');
-const botaoDiminuirFonte = document.getElementsById('diminuir-fonte');
+    let tamanhoFonteAtual = 100; // 100% = 1rem
 
-  botaoAumentarFonte.addEventListener('click', function(){tamanhoAtualFonte +=0.1});
-  document.body.style.fontSize = `${tamanhoAtualFonte}em`});
+    btnAumentar.addEventListener("click", function () {
+        if (tamanhoFonteAtual < 150) {
+            tamanhoFonteAtual += 10;
+            document.documentElement.style.fontSize = `${tamanhoFonteAtual}%`;
+        }
+    });
 
- botaoDiminuirFonte.addEventListener('click', function(){tamanhoAtualFonte -=0.1});
-document.body.style.fontSize = `${tamanhoAtualFonte}em`});
-
-
-
+    btnDiminuir.addEventListener("click", function () {
+        if (tamanhoFonteAtual > 70) {
+            tamanhoFonteAtual -= 10;
+            document.documentElement.style.fontSize = `${tamanhoFonteAtual}%`;
+        }
+    });
 });

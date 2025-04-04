@@ -2,52 +2,53 @@
 @import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
 
 :root {
-    --laranja-claro: #ff4015;
+    --laranja-claro: #b51212;
+    --vermelho: #e22400;
 }
 
 body {
-    font-size: 1rem;
-    font-family: 'Montserrat';
+    font-size: 1.25rem; 
+    font-family: 'Montserrat', sans-serif;
 }
 
 header {
     background-color: #ffffff;
 }
 
-
 section {
     padding-bottom: 5rem;
 }
 
-
 .nav-link {
-    color: #b51a00;
+    color: var(--vermelho);
     font-weight: 600;
 }
 
+/* Fundo da seção inicial */
 .inicio-fundo {
-    /* aula 3 */
     background-image: url('img/4965007.jpg');
-    /* Substitua pelo caminho da sua imagem */
     background-size: cover;
-    background-position: right;
+    background-position: center;
     border-radius: 80px;
     width: 100%;
     height: 606px;
     padding: 40px;
     margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-/* posicionamento para a imagem à direita */
+/* Imagem ao lado direito */
 .img-inicio {
-    position: absolute;
-    right: 0;
-    top: 18rem;
-    width: 45rem;
+    width: 90%;
+    max-width: 450px;
     height: auto;
+    border-radius: 20px;
+    margin-right: 20px;
 }
 
-
+/* Posicionamento do conteúdo esquerdo */
 .esquerda-conteudo {
     display: flex;
     flex-direction: column;
@@ -55,55 +56,42 @@ section {
     gap: 1rem;
 }
 
-
+/* Botão de início */
 .botao-inicio {
     background-color: var(--laranja-claro);
     border-radius: 30px;
     border: none;
     width: 14em;
-    /* Convertido para em aumenta o tamanho da fonte por tabela*/
     height: 3em;
-    /* Convertido para em */
     align-content: center;
-
+    color: white;
+    font-weight: bold;
 }
 
+/* Título principal */
 .display-4 {
     text-shadow: -5px 5px var(--laranja-claro);
 }
 
-
-#tropicalia {
-    position: relative;
-    padding-top: 5rem;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-    background: url('img/flor.png') top right no-repeat,
-        url('img/flor-esquerda.png') bottom left no-repeat;
-    background-size: 180px 180px;
-    /* Ajuste o tamanho conforme necessário */
-}
-
-#tropicalia .container {
+/* Configuração da seção Sertanejo */
+#sertanejo .container {
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     z-index: 1;
-    /* Garante que o conteúdo fica acima das imagens do background */
 }
-
 
 h2 {
     font-family: 'Lemon', serif;
-    font-size: 2.5em;
+    font-size: 5rem;
     font-style: normal;
-    color: var(--laranja-claro);
+    color: var(--vermelho);
 }
 
+/* Galeria */
 #galeria {
-    background-color: #FAF4F4;
-
+    background-color: #ffe2d6;
 }
 
 .fundo-galeria {
@@ -111,37 +99,61 @@ h2 {
     background-size: 180px 180px;
 }
 
+/* Contato */
 #contato {
     background-image: url('img/4965007.jpg');
     background-size: cover;
-    padding: 4rem 0;
-    /* Espaçamento interno para a seção de contato */
-
+    padding: 6rem 0;
 }
 
 .formulario {
-    background-color: #ffffff;
+    background-color: #ebebeb;
     padding: 2rem;
-    /* Espaçamento interno dentro do formulário */
     border-radius: 10px;
-    /* Borda arredondada para o formulário */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    /* Sombra suave para destacar o formulário */
+    box-shadow: 0 0 10px rgba(255, 134, 72, 0.1);
     font-weight: bold;
 }
 
 .formulario button {
-    background-color: #e22400;
+    background-color: #ff4015;
     border: none;
     font-weight: bold;
 }
 
-/* chama classe do bootstrap para modificar a cor */
+/* Campo do formulário */
 .form-control {
-    background-color: #F1EDEF;
+    background-color: #999999;
 }
 
+/* Logo secundário */
 .logo-secundario {
     display: block;
-    margin-top: 10px; /* Ajuste o valor conforme necessário */
+    margin-top: 10px;
 }
+
+/* Estilos do menu de acessibilidade */
+.menu-acessibilidade {
+    display: flex;
+    gap: 10px;
+}
+
+.menu-acessibilidade button {
+    background-color: var(--vermelho);
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.menu-acessibilidade button:hover {
+    background-color: #b51212;
+}
+
+
+/* Garante que todos os textos do site respondam ao aumento de fonte */
+body, h1, h2, h3, h4, h5, h6, p, a, li, label, input, textarea, button {
+    font-size: 1rem;
+}
+
